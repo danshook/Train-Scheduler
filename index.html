@@ -10,11 +10,84 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
-
 </head>
 
 <body>
+    <div class="container border border-dark">
+        <div class="jumbotron jumbotron-fluid text-center border border-success m-3">
+            <div class="container">
+                <h1 class="display-4">Grand Central Train Station</h1>
+                <p class="lead">We run trains!</p>
+            </div>
+        </div>
+
+
+
+        <div class="card m-3">
+            <h5 class="card-title text-white bg-dark text-center">Current Train Schedule</h5>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">text goes here</th>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">text goes here</th>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">text goes here</th>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                        <td>text goes here</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+        <div class="card m-3">
+            <h5 class="card-title text-white bg-dark text-center">Add Train</h5>
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Train Name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Destination</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                </div>
+            </form>
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Frequency (min)</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                </div>
+            </form>
+            <input class="btn btn-primary mt-3 mb-3" type="submit" value="Submit">
+        </div>
 
 
 
@@ -22,15 +95,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
