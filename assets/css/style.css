@@ -1,0 +1,34 @@
+#container {
+  /* font-family: 'Vast Shadow', cursive;
+    font-family: 'Bungee Shade', cursive; */
+  /* font-family: "Fascinate Inline", cursive; */
+  /* font-size: 75px; */
+  /* background-image: url("../images/trainItaly.jpeg"); */
+  background-color: green;
+  /* color: yellow; */
+  /* width: 100%; */
+  /* text-align: center; */
+}
+
+#jumbo {
+  /* font-family: 'Vast Shadow', cursive;
+      font-family: 'Bungee Shade', cursive; */
+  /* font-family: "Fascinate Inline", cursive; */
+  /* font-size: 75px; */
+  background-image: url("../images/trainStation.jpeg");
+  /* color: yellow; */
+  /* width: 100%; */
+  /* text-align: center; */
+}
+
+#train-table {
+  text-transform: uppercase;
+}
+
+#station {
+  color: white;
+}
+
+#address {
+  color: white;
+}

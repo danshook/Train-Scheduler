@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <div class="container border border-dark">
-        <div class="jumbotron jumbotron-fluid text-center border border-success m-3">
+    <div class="container border border-dark" id="container">
+        <div class="jumbotron jumbotron-fluid text-center border border-success m-3" id="jumbo">
             <div class="container">
-                <h1 class="display-4">Grand Central Train Station</h1>
-                <p class="lead">We run trains!</p>
+                <h1 class="display-4" id="station">Milan Centrale</h1>
+                <p class="lead" id="address">Piazza Duca DiAosta</p>
             </div>
         </div>
 
@@ -67,8 +67,8 @@
                     <label for="formGroupExampleInput2">Frequency (min)</label>
                     <input type="text" class="form-control" id="frequency" placeholder="">
                 </div>
+                <input class="btn btn-primary mt-3 mb-3 ml-3" id="submit" type="submit" value="Submit">
             </form>
-            <input class="btn btn-primary mt-3 mb-3" id="submit" type="submit" value="Submit">
         </div>
 
 
