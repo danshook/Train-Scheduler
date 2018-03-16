@@ -26,7 +26,7 @@ $("#submit").on("click", function(event) {
     $("#time")
       .val()
       .trim(),
-    "DD/MM/YY"
+    "HH/mm"
   ).format("X");
   var frequency = $("#frequency")
     .val()
@@ -39,13 +39,22 @@ $("#submit").on("click", function(event) {
     time: trainTime,
     frequency: frequency
   };
+
+  // Uploads employee data to the database
+  database.ref().push(newTrain);
+
+  // Logs everything to console
+  console.log(newTrain.name);
+  console.log(newTrain.destination);
+  console.log(newTrain.time);
+  console.log(newTrain.frequency);
+
+  // Alert
+  alert("New Train successfully added");
+
+  // Clears all of the text-boxes
+  $("#name").val("");
+  $("#destination").val("");
+  $("#time").val("");
+  $("#frequency").val("");
 });
-
-// Uploads employee data to the database
-database.ref().push(newTrain);
-
-// Logs everything to console
-console.log(trainName.name);
-console.log(destination.destination);
-console.log(trainTime.time);
-console.log(frequency.frequency);
