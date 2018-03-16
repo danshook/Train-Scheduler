@@ -14,6 +14,7 @@ var database = firebase.database();
 // Button for adding Trains
 $("#submit").on("click", function(event) {
   event.preventDefault();
+  console.log("button works");
 
   // Grabs user input
   var trainName = $("#name")
@@ -59,19 +60,31 @@ $("#submit").on("click", function(event) {
   $("#frequency").val("");
 });
 
-// 3. Create Firebase event for adding New Train to the database and a row in the html when a user adds an entry
+// Create Firebase event for adding New to the database and a row in the html when a user adds an entry
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
-  console.log(childSnapshot.val());
+  console.log("SNAPSHOT: " + childSnapshot.val());
 
   // Store everything into a variable.
-  var newTrain = childSnapshot.val().name;
-  var destination = childSnapshot.val().destination;
-  var time = childSnapshot.val().time;
-  var frequency = childSnapshot.val().frequency;
+  var nTrain = childSnapshot.val().name;
+  var tDestination = childSnapshot.val().destination;
+  var tTime = childSnapshot.val().time;
+  var tFrequency = childSnapshot.val().frequency;
 
-  // Employee Info
-  console.log(newTrain);
-  console.log(destination);
-  console.log(time);
-  console.log(frequency);
+  // Train Info
+  console.log("NEWTRAIN: " + nTrain);
+  console.log("DEST: " + tDestination);
+  console.log("TIME: " + tTime);
+  console.log("FREQ: " + tFrequency);
+
+  $("#train-table > tbody").append(
+    "<tr><td>" +
+      nTrain +
+      "</td><td>" +
+      tDestination +
+      "</td><td>" +
+      tFrequency +
+      "</td><td>" +
+      tTime +
+      "</td><td>"
+  );
 });
