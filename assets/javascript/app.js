@@ -73,8 +73,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Train Info
   console.log("NEWTRAIN: " + nTrain);
   console.log("DEST: " + tDestination);
-  console.log("TIME: " + tTime);
   console.log("FREQ: " + tFrequency);
+  console.log("TIME: " + tTime);
 
   $("#train-table > tbody").append(
     "<tr><td>" +
@@ -84,7 +84,33 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
       "</td><td>" +
       tFrequency +
       "</td><td>" +
+      moment(nextArrival).format("HH:mm") +
+      "</td><td>" +
       tTime +
-      "</td><td>"
+      "</td><td>" +
+      "" +
+      "</td></tr>"
   );
+  // First Train Time
+  var tTimeConverted = moment(tTime, "HH:mm").subtract(1, "years");
+  console.log("CONVERTED TIME " + tTimeConverted);
+
+  // Current Time
+  var currentTime = moment();
+  console.log("CURRENT TIME " + moment(currentTime).format("HH:MM"));
+
+  // Difference between the times
+  var timeDifference = moment().diff(moment(tTimeConverted), "minutes");
+  console.log("TIME DIFFERENCE " + timeDifference);
+
+  var timeApart = timeDifference % tFrequency;
+  console.log("TIME APART " + timeApart);
+
+  var minutesAway = tFrequency - timeApart;
+  console.log("MINUTES AWAY " + minutesAway);
+
+  var nextArrival = moment().add(minutesAway, "minutes");
+  console.log("NEXT ARRIVAL " + moment(nextArrival).format("HH:mm"));
+
+  // tArrival = moment().add(tMinutes, “m”).format(“hh:mm A”);
 });
