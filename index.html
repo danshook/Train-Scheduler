@@ -20,59 +20,75 @@
     <div class="container border border-dark" id="container">
         <div class="jumbotron jumbotron-fluid text-center border border-success m-3" id="jumbo">
             <div class="container">
-                <h1 class="display-4" id="station">Milan Centrale</h1>
-                <p class="lead" id="address">Piazza Duca DiAosta</p>
+                <h1 class="display-4 text-white" id="station">
+                    <strong>Milan Centrale</strong>
+                </h1>
+                <p class="lead text-white" id="address">
+                    <strong>Piazza Duca DiAosta</strong>
+                </p>
             </div>
         </div>
-
-
-
         <div class="card m-3">
             <h5 class="card-title text-white bg-dark text-center">Current Train Schedule</h5>
             <table class="table table-hover" id="train-table">
                 <thead>
                     <tr>
-                        <th scope="col">Train Name</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Frequency (min)</th>
-                        <th scope="col">Next Arrival</th>
-                        <th scope="col">Minutes Away</th>
+                        <th scope="col">
+                            <strong>Train Name</strong>
+                        </th>
+                        <th scope="col">
+                            <strong>Destination</strong>
+                        </th>
+                        <th scope="col">
+                            <strong>Frequency (min)</strong>
+                        </th>
+                        <th scope="col">
+                            <strong>Next Arrival</strong>
+                        </th>
+                        <th scope="col">
+                            <strong>Minutes Away</strong>
+                        </th>
                     </tr>
                 </thead>
+
                 <tbody>
 
                 </tbody>
+
             </table>
         </div>
-
-
         <div class="card m-3">
             <h5 class="card-title text-white bg-dark text-center">Add Train</h5>
             <form>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Train Name</label>
+                <div class="form-group m-3">
+                    <label for="formGroupExampleInput">
+                        <strong>Train Name</strong>
+                    </label>
                     <input type="text" class="form-control" id="name" placeholder="">
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Destination</label>
+                <div class="form-group m-3">
+                    <label for="formGroupExampleInput2">
+                        <strong>Destination</strong>
+                    </label>
                     <input type="text" class="form-control" id="destination" placeholder="">
                 </div>
             </form>
             <form>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
+                <div class="form-group m-3">
+                    <label for="formGroupExampleInput">
+                        <strong>First Train Time (HH:mm - military time)</strong>
+                    </label>
                     <input type="text" class="form-control" id="time" placeholder="">
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Frequency (min)</label>
+                <div class="form-group m-3">
+                    <label for="formGroupExampleInput2">
+                        <strong>Frequency (min)</strong>
+                    </label>
                     <input type="text" class="form-control" id="frequency" placeholder="">
                 </div>
                 <input class="btn btn-primary mt-3 mb-3 ml-3" id="submit" type="submit" value="Submit">
             </form>
         </div>
-
-
-
     </div>
 
     <!-- Script links start here: -->
@@ -83,7 +99,6 @@
     <script src="assets/javascript/app.js"></script>
 
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
 
 </body>
 
